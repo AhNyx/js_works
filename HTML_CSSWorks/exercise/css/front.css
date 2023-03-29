@@ -1,0 +1,18 @@
+.wrap{
+    width: 520px;
+    border: 1px solid #000;
+    padding: 20px 30px;
+}
+p{
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+ul{
+    list-style: none;
+}
+ul li{
+    margin-bottom: 8px;
+}
+div{
+    margin: 10px 0;
+}

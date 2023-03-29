@@ -1,0 +1,33 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+#container{
+    width: 1000px;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+}
+header, section, aside, footer{
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    padding: 10px;
+}
+header{
+    height: 100px;
+}
+section{
+    width: 630px;
+    height: 600px;
+    float: left;
+    background-color: aquamarine;
+}
+aside{
+    width: 320px;
+    height: 600px;
+    float: right;
+    background-color: bisque;
+}
+footer{
+    height: 100px;
+    clear: both;
+}

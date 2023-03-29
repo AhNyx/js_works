@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학점 계산 프로그램</title>
+    <style>
+        span{
+            color: #f00;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>학점 계산 프로그램</h3>
+</body>
+<script>
+    let score = parseInt(prompt("학점을 입력하세요"));
+    let grade;
+    if (isNaN(score) || score > 100) {
+        document.write("잘못 입력하셨습니다.")
+    } 
+    else {
+        if (score >= 90) {
+            grade = 'A';
+        }
+        else if (score < 90 && score >= 80) {
+            grade = 'B';
+        }
+        else if (score < 80 && score >= 70) {
+            grade = 'C';
+        }
+        else if (score < 70 && score >= 60) {
+            grade = 'D';
+        }
+        else {
+            grade = 'F';
+        }
+        document.write("학점은 <span>" + grade + "</span>입니다");
+    }
+</script>
+
+</html>

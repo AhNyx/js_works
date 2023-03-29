@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수직 정렬(vertical-align)</title>
+    <style>
+        table, th, td{
+            width: 300px;
+            height: 100px;
+            border: 1px solid black;
+            text-align: center;
+            /* border-collapse: collapse; */
+        }
+        td{
+            /* padding: 20px; */
+            /* vertical-align: bottom; */
+        }
+        .va1{
+            vertical-align: top;
+        }
+        .va2{
+            vertical-align: middle;
+        }
+        .va3{
+            vertical-align: bottom;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td class="va1">alignment</td>
+                <td class="va2">alignment</td>
+                <td class="va3">alignment</td>
+            </tr>
+            <tr>
+                <td colspan="3">셀 병합</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
