@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lotto 복권 추첨</title>
+</head>
+<body>
+    <h2>로또 추첨</h2>
+
+    <script>
+        const maxNum = 3;
+        const lucky = 3;
+        let nameAry = ["a","b","c","d","e","f","g"]
+        let ary = [];
+        
+        for(let i=0;i<lucky;i++){   
+            ary[i] = Math.floor(Math.random()*nameAry.length);
+            for(let j=0;j<i;j++){
+                if(ary[i] === ary[j]){
+                    i--;
+                }
+            }
+        }
+        document.write("당첨 번호 : ");
+        for(let i in ary){ 
+            document.write(ary[i] + "번 ");
+        }
+
+    </script>
+
+</body>
+</html>

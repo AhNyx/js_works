@@ -18,6 +18,28 @@
         <img src="./images/flower.jpg" alt="꽃" id="pic">
     </div>
     <script>
+
+        let img = document.getElementById("pic");
+        let btnText = document.getElementById("btnText");
+        let state = true;
+
+        function showHide(){
+            if(state){
+                img.style.display = "block";
+                btnText.innerHTML = "숨기기";
+                state = false;
+            }
+            else {
+                img.style.display = "none";
+                btnText.innerHTML = "보이기";
+                state = true;
+            }
+        }
+
+
+
+        // 2번째 방법
+        /*
         function showHide(){
             let img = document.getElementById("pic");
             let btnText = document.getElementById("btnText");
@@ -30,6 +52,7 @@
                 btnText.innerHTML = "숨기기";
             }
         }
+        */
     </script>
 </body>
 </html>
