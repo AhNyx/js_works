@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>팝업 창</title>
+    <style>
+      #contanier {
+        width: 320px;
+        height: 370px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 2px solid blue;
+        border-radius: 10px;
+      }
+      h1 {
+        margin: 15px 20px 30px 15px;
+      }
+      ul {
+        padding-left: 25px;
+      }
+      ul li {
+        list-style: "-";
+        line-height: 2;
+        padding-left: 10px;
+      }
+      b {
+        color: red;
+      }
+      p {
+        margin: 20px 15px;
+        line-height: 2;
+      }
+      span {
+        position: absolute;
+        right: 50px;
+        bottom: 50px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="contanier">
+      <h1>전산 시스템 점검</h1>
+      <ul>
+        <li><b>일시 : </b>2021. 9. 1(수). 오전 1 ~ 3시</li>
+        <li><b>내용 : </b>시스템 점검 및 업데이트</li>
+      </ul>
+      <p>
+        고객분들께 불편을 드려 죄송합니다.<br />
+        더 나은 서비스로 찾아 뵙겠습니다.
+      </p>
+      <span onclick="javascript:window.close()">창 닫기</span>
+    </div>
+  </body>
+</html>
