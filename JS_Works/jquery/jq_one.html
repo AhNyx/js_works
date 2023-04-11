@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나를 클릭하면 , 내가 사라질 것이다</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"
+        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h2 id="text">나를 클릭하면 , 내가 사라질 것이다</h2>
+    <script>
+        let sw = true;
+        $(document).ready(function () {
+            $("#text").on('mouseover', function () {
+                $(this).hide();
+            })
+            $("#text").on('mouseout', function () {
+                $(this).show();
+            })
+        });
+
+    </script>
+
+</body>
+
+</html>
