@@ -26,13 +26,14 @@ a{
     background: url(../images/bullet_down.png) no-repeat right;
     cursor: pointer;
 }
-.accordio_box ol li.on h4{
-    background: url(../images/bullet_up.png) no-repeat right;
-}
 .accordio_box ol li h4 span{
     margin-right: 10px;
     font-weight: 900;
 }
+.accordio_box ol li.on h4{
+    background: url(../images/bullet_up.png) no-repeat right;
+}
+
 .accordio_box ol li p{
    visibility: hidden; 
    line-height: 2;
