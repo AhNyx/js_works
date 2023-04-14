@@ -44,3 +44,21 @@ SELECT cus.name, SUM(ord.saleprice) FROM orders ord , customer cus WHERE ord.cus
 -- 가격이 8000원 이상인 도서를 구매한 고객별 주문도서의 총 수량을 구하시오
 -- 단 , 2권 이상 구매한 고객만 찾으시오
 SELECT custid, COUNT(*) FROM orders WHERE saleprice >= 8000 GROUP BY custid HAVING COUNT(*) >= 2;
+
+-- 조인(1개 테이블 이상 연결하는 기법)
+SELECT cus.name, ord.saleprice, ord.orderdate
+FROM orders ord, customer cus
+WHERE ord.custid = cus.custid
+AND cus.name = '김연아';
+
+-- 고객 이름별로 주문한 도서의 총 판매액을 구하시오
+-- 집계를 구할때는 GROUP BY절 사용
+-- HAVING 절은 GROUP BY의 질의 결과 나타내는 그룹을 제한하는 역할
+SELECT cus.name, SUM(ord.saleprice)
+FROM orders ord, customer cus
+WHERE ord.custid = cus.custid
+GROUP BY cus.name
+HAVING cus.name = '박지성';
+
+
+
