@@ -7,6 +7,34 @@
     <title>GoodMall을 방문해주셔서 감사합니다.</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <script src="js/bootstrap.js"></script>
+    <style>
+        /* 모바일 기준 - 320px 이상 */
+        @media screen and (min-width: 320px) and (max-width: 780px) {
+            header .title{
+                margin-left: 20px;
+            }
+            header h1.display-4{
+                font-size: 2.2rem;
+
+            }
+            .col-4{
+                width: 90%;
+                margin: 10px 5%;
+                text-align: center;
+            }
+            .col-6{
+                width: 90%;
+                margin: 0 5%;
+                text-align: center;
+            }
+            .card img{
+                border-radius: 5px;
+            }
+            .card-text{
+                margin: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -32,7 +60,7 @@
                   </div>
                 </div>
               </nav>
-              <div class="my-3">
+              <div class="title my-3">
                 <!-- 제목 영역(배너 영역) -->
                 <h1 class="display-4">Welcome to Shopping Mall</h1>
                 <p class="lead">좋은 품질, 착한 가격을 만나보세요</p>
@@ -46,8 +74,8 @@
                         <div class="card-body">
                             <h5 class="card-title">다양한 상품</h5>
                             <p class="card-text">
-                                당신과 가장 가까운 마트..
-                                장보기의 기쁨을 더합니다.
+                                <p>당신과 가장 가까운 마트..</p>
+                                <p>장보기의 기쁨을 더합니다.</p>
                             </p>
                             <a href="#" class="btn btn-primary">상세 정보 &raquo;</a>
                         </div>
@@ -58,8 +86,8 @@
                         <div class="card-body">
                             <h5 class="card-title">질좋은 상품</h5>
                             <p class="card-text">
-                                당신과 가장 가까운 마트..
-                                장보기의 기쁨을 더합니다.
+                                <p>당신과 가장 가까운 마트..</p>
+                                <p>장보기의 기쁨을 더합니다.</p>
                             </p>
                             <a href="#" class="btn btn-success">상세 정보 &raquo;</a>
                         </div>
@@ -70,17 +98,43 @@
                         <div class="card-body">
                             <h5 class="card-title">합리적 가격</h5>
                             <p class="card-text">
-                                당신과 가장 가까운 마트..
-                                장보기의 기쁨을 더합니다.
+                                <p>당신과 가장 가까운 마트..</p>
+                                <p>장보기의 기쁨을 더합니다.</p>
                             </p>
                             <a href="#" class="btn btn-secondary">상세 정보 &raquo;</a>
                         </div>
                     </div>
                 </div>
+                <!-- 상품 카테고리 끝 -->
+                <!-- 상품 이미지 -->
+                <div class="col-6 my-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">상품 정보 1</h5>
+                            <img src="images/prod1.jpg" alt="상품이미지">
+                            <p class="card-text">상품 이미지</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 my-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">상품 정보 2</h5>
+                            <img src="images/prod2.jpg" alt="상품이미지">
+                            <p class="card-text">상품 이미지</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-        <footer>
-
+        <footer class="py-3 bg-dark">
+            <div class="container">
+                <p style="color: #ccc">
+                    브랜드명: GoodMall | 대표자: 다있소 | 사업자등록번호: 123-12-12345<br>
+                    주소 : 서울시 구로구 0000-0000<br>
+                    계좌번호 : 우리은행(홍길동) XXX-02XX-XXXX-XX | 예약문의: 010-0000-0000
+                </p>
+            </div>
         </footer>
     </div>
 </body>

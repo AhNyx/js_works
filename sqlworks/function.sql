@@ -48,6 +48,11 @@ SELECT bookname, LENGTH(bookname) 문자수, LENGTHB(bookname) 바이트수 FROM
 -- 20일 전의 날짜 출력
 SELECT SYSDATE - 20 FROM dual;
 
+-- 4월 1일에서 10일후 (특정한 날: 문자형 -> 날짜형)
+SELECT TO_DATE('2023-04-17') + 10 FROM DUAL;
+
+-- 입사일 : 2022-01-01 퇴사일 : 2023-1-31(월수 계산)
+SELECT ROUND(MONTHS_BETWEEN(TO_DATE('2023-01-31'), TO_DATE('2022-01-01'))) 총개월수 FROM DUAL;
 
 
 -- 3개월 후의 날짜 출력
