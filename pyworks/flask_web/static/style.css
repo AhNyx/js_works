@@ -1,0 +1,12 @@
+/* 공통 스타일 */
+#container{
+    width:90%;
+    margin:0 auto;
+    text-align: center;
+}
+h1{
+    color: blue;
+}
+ul li{
+    list-style: none;
+}
