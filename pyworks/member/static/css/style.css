@@ -98,3 +98,100 @@ nav{
     margin: 20px auto;
     border-radius: 5px;
 }
+
+/* footer 스타일 */
+footer{
+    height: 80px;
+    border-top: 2px solid #222;
+}
+#bottom-menu{
+    margin: 10px 10px 10px 40px;
+}
+#bottom-menu li{
+    display: inline-block;
+    margin: 10px 0;
+    padding: 0 10px;
+    border-right: 1px solid #ccc;
+}
+#bottom-menu li a{
+    color: #444;
+}
+#bottom-menu li:last-child{
+    border: none;
+}
+/* memberlist 스타일 */
+#memberlist{
+    width: 700px;
+    margin: 40px auto;
+    text-align: center;
+}
+#memberlist table{
+    width: 700px;
+    margin 30px auto;
+}
+#memberlist table, th, td{
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    padding: 10px 0;
+}
+#memberlist table thead{
+    background: #ccc;
+}
+
+/* register 스타일 */
+#register{
+    width: 500px;
+    margin: 30px auto;
+}
+#register form{
+    margin: 40px auto
+}
+#register form ul li{
+    margin: 30px 40px 40px 40px;
+}
+#register form label{
+    width:120px;
+    float: left;
+    padding-left:30px
+    }
+
+}
+#resiter form label.radio{
+    width: 40px;
+    padding-left: 0px;
+}
+#resiter form li.button[type='submit'] input[type='rest']{
+    clear: both;
+    padding left
+}
+
+/* login 스타일 */
+#login {
+    width: 500px;
+    margin: 40px auto;
+}
+#login form{
+    margin:40px auto;
+}
+#login form ul li{
+    margin: 30px 70px;
+}
+#login form label{
+    width: 100px;
+    float: left;
+}
+#login form input[type='text'],input[type='password']{
+    width: 200px;
+    height: 30px;
+}
+#login form input[type='submit']{
+    width: 100px;
+    height: 30px;
+    margin-left: 150px;
+}
+#login form p.error{
+    text-align: center;
+    color: #f00;
+    font-weight: bold;
+    padding-top: 15px;
+}
