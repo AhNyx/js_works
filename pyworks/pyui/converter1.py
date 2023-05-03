@@ -6,13 +6,11 @@ class App:
         frame = Frame(root)
         frame.pack()
 
-        Label(frame, text="deg C").grid(row=0,column=0)
-        Button(frame, text="변환", command=self.convert).grid(row=1,column=0)
+        Label(frame, text="deg C").grid(row=0, column=0)
+        Button(frame, text="변환", command=self.convert).grid(row=1, column=0)
 
     def convert(self):
         print("아직 구현하지 않음")
-
-
 
 root = Tk()
 root.title("온도 변환기")

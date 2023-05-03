@@ -2,8 +2,9 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>강남 커뮤니티입니다</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>강남 커뮤니티입니다.</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
     <div id="container">
@@ -11,8 +12,10 @@
         <section id="main">
             <h2>안녕하세요! 강남 커뮤니티입니다.</h2>
             <div class="img1">
-                <img src="{{ url_for('static', filename='images/강남.jpg') }}" alt="강남">
+                <img src="{{ url_for('static', filename='./images/gangnam.jpg') }}">
             </div>
+            <div class="clock">{{ time }}</div>
+
         </section>
         {% include 'footer.html' %}
     </div>
