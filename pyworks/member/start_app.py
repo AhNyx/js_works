@@ -4,7 +4,6 @@
 from flask import Flask, render_template, request, \
     redirect, url_for, session
 import sqlite3
-import datetime
 
 app = Flask(__name__)
 
@@ -19,9 +18,7 @@ print(getconn())
 # url - '/' 경로 설정
 @app.route('/', methods = ['GET'])
 def index():
-    time = datetime.datetime.now().strftime("%Y.%m.%d. %H:%M:%S")
-    print(time)
-    return render_template('index.html' , time=time)
+    return render_template('index.html')
 
 # 회원 목록
 @app.route('/memberlist', methods = ['GET'])

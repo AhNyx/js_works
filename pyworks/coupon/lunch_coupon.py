@@ -14,7 +14,7 @@ def click():
         if person not in result:
             result.append(person)
     output.delete(0.0, END)
-    output.insert(END, result)
+    output.insert(END, ' '.join(result))
 
 
 
