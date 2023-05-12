@@ -3,7 +3,7 @@
 import datetime
 import calendar as cal
 now = datetime.datetime.today()
-#age = int(input('나이 입력 : '))
+#age = int(inputs('나이 입력 : '))
 
 #cal.prcal(2023)
 cal.prmonth(2023, 4)

@@ -48,7 +48,7 @@ result = string.split(':')
 #print(result[-1])
 
 # 두 수를 동시에 입력 받아서 더하기
-#n1, n2 = input("두 수 입력 : ").split()
+#n1, n2 = inputs("두 수 입력 : ").split()
 
 #add = int(n1) + int(n2)
 #print(add)
