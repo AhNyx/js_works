@@ -1,48 +1,42 @@
-import random
 """
-- 가위 바위 보 게임 만들기
+★ 가위, 바위, 보 게임 만들기
 - 게임 방법
-1.당신(you)은 가위, 바위, 보 중 하나를 입력한다.
-2. 컴퓨터(com)는 가위, 바위, 보 중 하나를 랜섬 생성한다
-3. 결과 출력은 무승부, 패, 승이다
-4. 잘못 입력한 경우 " 잘못된 입력입니다. 다시 입력해 주세요"
+1. 당신(you)은 가위, 바위, 보 중 하나를 입력한다.
+2. 컴퓨터(com)는 가위, 바위, 보 중 하나를 랜덤 생성한다.
+3. 결과 출력은 무승부, 패, 승이다.
+4. 잘못 입력한 경우 "잘못된 입력입니다. 다시 입력해 주세요"
 """
 
-userpae = ""
-usernum = 0
-while True:
-    userpae = input("가위바위보 입력\n")
-    if userpae == '가위' :
-        usernum = 1
-        break;
-    elif userpae == '바위' :
-        usernum = 2
-        break;
-    elif userpae == '보' :
-        usernum = 3
-        break;
-    else :
-        print("잘못된 입력입니다. 다시 입력해 주세요")
+import random
+import sys
 
+print("♠ 가위 바위 보 게임 ♠")
+가위바위보 = ['가위', '바위', '보']
 
-comnum = random.randint(1 , 3)
-if comnum == 1:
-    compae = '가위'
-elif comnum == 2:
-    compae = '바위'
-elif comnum == 3:
-    compae = '보'
+you = input('당신 : ')
 
-result = ""
+# random.choice() 사용
+com = random.choice(가위바위보)
+print("컴퓨터 :", com)
 
-if usernum == compae :
-    print("무승부")
-elif usernum == 1:
+"""
+# random.randint() 사용
+rnd = random.randint(0, 2)
+com = 가위바위보[rnd]
+print("컴퓨터 :", com)
+"""
+if you not in 가위바위보:   # x in y문
+    print("잘못된 입력입니다. 다시 입력해주세요")
+    sys.exit(0)  # 프로그램 즉시 종료
 
-
-
-
-print(f'당신 : {userpae}')
-print(f'컴퓨터 : {compae}')
-print(f'당신 : {result}')
-
+#결과 : you 기준 - 1.무승부, 2.승, 3.패
+if you == com:
+    print('결과 : 무승부')
+elif you == '가위' and com == '보':
+    print("결과 : 승")
+elif you == '바위' and com == '가위':
+    print("결과 : 승")
+elif you == '보' and com == '바위':
+    print("결과 : 승")
+else:
+    print("결과 : 패")
