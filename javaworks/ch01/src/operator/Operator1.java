@@ -3,33 +3,32 @@ package operator;
 public class Operator1 {
 
 	public static void main(String[] args) {
-		// ¿µ¾î, ¼öÇĞ°ú¸ñÀÇ ÃÑÁ¡°ú Æò±Õ
-		// º¯¼ö(ÀÔ·Â)
+		// ì˜ì–´, ìˆ˜í•™ê³¼ëª©ì˜ ì´ì ê³¼ í‰ê· 
+		// ë³€ìˆ˜(ì…ë ¥)
 		int engScore = 90;
 		int mathScore = 85;
-		int totalScore; 
-		double avgScore;
+		int totalScore;
+		double avgScore;  //ì‹¤ìˆ˜í˜• 8byte ìë£Œí˜•
 		
-		// ÃÑÁ¡°ú Æò±Õ °è»ê
+		//ì´ì ê³¼ í‰ê·  ê³„ì‚°
 		totalScore = engScore + mathScore;
-		//int·Î ¿¬»êÇÏ¸é intÇüÀÌ µÇ¹Ç·Î ÀÚ·áÀÇ ¼Õ½ÇÀÌ »ı±è, (double)·Î Çüº¯È¯
-		avgScore = (double)totalScore / 2;
-		// Ãâ·Â
-		System.out.println("ÃÑÁ¡ : "+ totalScore);
-		System.out.println("Æò±Õ : "+ avgScore);
+		//intë¡œ ì—°ì‚°í•˜ë©´ intí˜•ì´ ë˜ë¯€ë¡œ ìë£Œì˜ ì†ì‹¤ì´ ìƒê¹€, doubleë¡œ í˜•ë³€í™˜
+		avgScore = (double)totalScore / 2;  
 		
-		//++¿¬»êÀÚ - 1Áõ°¡, --¿¬»êÀÚ - 1°¨¼Ò
-		//++°¡ µÚ¿¡ »ç¿ë - ÈÄÄ¡¿¬»ê, ¾Õ¿¡ »ç¿ë - ÀüÄ¡ ¿¬»ê
+		//ì¶œë ¥
+		System.out.println("ì´ì : " + totalScore);  //ìˆ«ìí˜•ì´ ë¬¸ìí˜•ìœ¼ë¡œ ìë™ í˜•ë³€í™˜ë¨
+		System.out.println("í‰ê· :" + avgScore);
+		
+		//++ì—°ì‚°ì - 1ì¦ê°€, --ì—°ì‚°ì - 1ê°ì†Œ
+		//++ê°€ ë’¤ì— ì‚¬ìš© - í›„ì¹˜ì—°ì‚°, ì•ì— ì‚¬ìš© - ì „ì¹˜ ì—°ì‚°
 		int num = 10;
 		int val = 0;
-		//val = num++; // °è»ê ¼ø¼­ 1.numÀ» val¿¡ ÀúÀå, 2.num=num+1 Áõ°¡
-		val = num++;
-		//val = ++num; // °è»ê¼ø¼­ 2.num=num+1 1Áõ°¡, 2.numÀ» val¿¡ ÀúÀå
+		
+		//val = num++;  //ê³„ì‚° ìˆœì„œ 1.numì„ valì— ì €ì¥, 2.num=num+1 1ì¦ê°€
+		val = ++num;    //ê³„ì‚° ìˆœì„œ 1.num=num+1 1ì¦ê°€, 2.numì„ valì— ì €ì¥
 		
 		System.out.println(val);
 		System.out.println(num);
-		
-		
 	}
 
 }

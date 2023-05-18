@@ -3,26 +3,29 @@ package input;
 import java.util.Scanner;
 
 public class BonusPoint {
-	
+
 	public static void main(String[] args) {
-		
-		// °í°´ÀÇ ±¸¸Å Æ÷ÀÎÆ® °è»ê ÇÁ·Î±×·¥
-		// º¸³Ê½º Æ÷ÀÎÆ® = °¡°İ X º¸³Ê½ºÀû¸³À²
+		// ê³ ê°ì˜ êµ¬ë§¤ í¬ì¸íŠ¸ ê³„ì‚° í”„ë¡œê·¸ë¨
+		// ë³´ë„ˆìŠ¤ í¬ì¸íŠ¸ = êµ¬ë§¤ê¸ˆì•¡ x ë³´ë„ˆìŠ¤ì ë¦½ìœ¨(5%)
 		Scanner sc = new Scanner(System.in);
-		System.out.print("ÀÌ¸§À» ÀÔ·ÂÇÏ¼¼¿ä: ");
-		String name = sc.nextLine();
 		
-		System.out.print("±¸¸Å ±İ¾×À» ÀÔ·ÂÇÏ¼¼¿ä: ");
-		int price = sc.nextInt();
+		//ê³ ê°ì˜ ì´ë¦„ì„ ì…ë ¥ë°›ìœ¼ì„¸ìš”
+		System.out.print("ê³ ê°ì˜ ì´ë¦„ì„ ì…ë ¥í•˜ì„¸ìš”: ");
+		String name = sc.nextLine();
+		//System.out.println(name);
+		
+		System.out.print("êµ¬ë§¤ ê¸ˆì•¡ì„ ì…ë ¥í•˜ì„¸ìš”: ");
+		int price = sc.nextInt();  //í‚¤ë³´ë“œ ì…ë ¥(ìˆ«ì)
 		int bonusPoint = 0;
 		double bonusRatio = 0.05;
 		
-		//int Çü < doubleÇü
+		//intí˜• < (int)doubleí˜• - ìë£Œí˜•ì˜ í¬ê¸°ë¥¼ ë§ì¶¤
 		bonusPoint = (int)(price * bonusRatio);
 		
-		System.out.printf("%s´ÔÀÇ º¸³Ê½º Æ÷ÀÎÆ®´Â %dÁ¡ÀÔ´Ï´Ù", name , bonusPoint);
+		System.out.printf("%së‹˜ì˜ ë³´ë„ˆìŠ¤ í¬ì¸íŠ¸ëŠ” %dì ì…ë‹ˆë‹¤.", name, bonusPoint);
 		
 		sc.close();
-	
+
 	}
+
 }

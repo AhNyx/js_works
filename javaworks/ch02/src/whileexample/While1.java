@@ -3,16 +3,18 @@ package whileexample;
 public class While1 {
 
 	public static void main(String[] args) {
-		// while ¹İº¹¹®
-		// 1ºÎÅÍ 10±îÁö Ãâ·Â
-		int i = 0;
-		int sumVal = 0; //ÇÕ°è ÀúÀå º¯¼ö
-		while(i<10) {
-			i++;
+		// while ë°˜ë³µë¬¸
+		// 1ë¶€í„° 10ê¹Œì§€ ì¶œë ¥, í•©ê³„ ê³„ì‚°
+		int i = 0;  //ë°˜ë³µ ë³€ìˆ˜
+		int sumVal = 0;  //í•©ê³„ ì €ì¥ ë³€ìˆ˜
+		
+		while(i < 10) {
+			i++;  //i = i + 1
 			sumVal += i;
-			System.out.println(i);
+			System.out.println("i=" + i + ", sumVal=" + sumVal);
 		}
-		System.out.println(sumVal);
+		
+		System.out.println("í•©ê³„: " + sumVal);
 	}
 
 }

@@ -1,30 +1,29 @@
 package operator;
 
 public class PrintFormat {
-	
+
 	public static void main(String[] args) {
-		//printf("¹®ÀÚ¿­ Æ÷¸Ë", °´Ã¼) ÇÔ¼ö
-		//¼­½Ä ¹®ÀÚ - %d : Á¤¼ö, %f - ½Ç¼ö, %s - ¹®ÀÚ¿­
-		//ÀÌ½ºÄÉÀÌÇÁ ¹®ÀÚ - \n : ÁÙ¹Ù²Ş, \t : ÅÇ
-		
+		//printf("ë¬¸ìì—´ í¬ë§·", ê°ì²´) í•¨ìˆ˜
+		//ì„œì‹ ë¬¸ì - %d : ì •ìˆ˜, %f - ì‹¤ìˆ˜, %s - ë¬¸ìì—´
+		//ì´ìŠ¤ì¼€ì´í”„ ë¬¸ì - \n : ì¤„ë°”ê¿ˆ, \t : íƒ­
 		
 		int year = 2022;
-		System.out.println("¿ÃÇØ´Â " + year + "³â ÀÔ´Ï´Ù");
-		System.out.printf("¿ÃÇØ´Â %d³â ÀÔ´Ï´Ù.", year);
-		System.out.println("\n-------------------");
+		System.out.println("ì˜¬í•´ëŠ” " + year + "ë…„ ì…ë‹ˆë‹¤.");
+		System.out.printf("ì˜¬í•´ëŠ” %dë…„ ì…ë‹ˆë‹¤.", year);
+		System.out.println();
 		
-		String nick = "¾óÀ½ °øÁÖ";
-		System.out.printf("±×³àÀÇ º°¸íÀº %s ÀÔ´Ï´Ù", nick);
+		String nick = "ì–¼ìŒ ê³µì£¼";
+		System.out.printf("ê·¸ë…€ì˜ ë³„ëª…ì€ %sì…ë‹ˆë‹¤.", nick);
 		System.out.println();
 		
 		String table = "";
-		table += "-------------------\n";
-		table += "ÀÌ¸§\t³ªÀÌ\t³ª¶ó\n";
-		table += "°­°¨Âù\t82\t°í·Á\n";
-		table += "ÀÌ¼ø½Å\t52\tÁ¶¼±\n";
-		table += "-------------------\n";
+		table += "----------------------------\n";
+		table += "ì´ë¦„\të‚˜ì´\të‚˜ë¼\n";
+		table += "----------------------------\n";
+		table += "ê°•ê°ì°¬\t82\tê³ ë ¤\n";
+		table += "ì´ìˆœì‹ \t53\tì¡°ì„ \n";
+		table += "----------------------------\n";
 		
 		System.out.println(table);
-		
 	}
 }

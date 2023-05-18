@@ -3,37 +3,44 @@ package forexample;
 import java.util.Scanner;
 
 public class For1 {
+
 	public static void main(String[] args) {
-		// 1ºÎÅÍ 10±îÁö Ãâ·Â, ÇÕ°è
-		int sumV = 0;
+		// 1ë¶€í„° 10ê¹Œì§€ ì¶œë ¥, í•©ê³„
+		int sumV = 0;  //í•©ê³„ ë³€ìˆ˜
 		
-		for(int i=1;i<=10;i++) {
+		for(int i=1; i<=10; i++) {
 			sumV += i;
-			System.out.println("i=" + i + ", sum=" + sumV);
+//			System.out.println("i=" + i + ", sum=" + sumV);
 		}
-		System.out.println("ÇÕ°è =" + sumV);
+		System.out.println("í•©ê³„: " + sumV);
 		
-		
-		// ¹®ÀÚ ¼¼Æ® - ¾ËÆÄºª Ãâ·Â (´ë¹®ÀÚ , ¼Ò¹®ÀÚ)
+		//ë¬¸ìž ì„¸íŠ¸ - ì•ŒíŒŒë²³ ì¶œë ¥(ëŒ€ë¬¸ìž, ì†Œë¬¸ìž)
 		char ch;
 		for(ch = 65; ch < 123; ch++) {
 			System.out.print(ch + " ");
 		}
 		System.out.println();
-		//À¯´Ï ÄÚµå ÇÑ±Û
+		
+		//ìœ ë‹ˆì½”ë“œ - í•œê¸€
 		for(ch = 12593; ch < 12686; ch++) {
 			System.out.print(ch + " ");
 		}
-		
-		Scanner sc = new Scanner(System.in);
-		//±¸±¸´Ü
 		System.out.println();
-		System.out.println("´Ü ¼ö¸¦ ÀÔ·Â");
+		
+		//êµ¬êµ¬ë‹¨(ë‹¨ì„ ìž…ë ¥ë°›ì•„ ì¶œë ¥í•˜ê¸°)
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("ë‹¨ ìž…ë ¥ : ");
 		int dan = sc.nextInt();
-		for(int i=1;i<10;i++) {
-			System.out.println(dan+"*"+ i+"="+dan*i);
+		
+		for(int i=1; i<10; i++) {
+			System.out.println(dan + "x" + i + "=" + (dan*i));
 		}
 		sc.close();
 	}
-	
 }
+
+
+
+
+

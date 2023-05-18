@@ -1,38 +1,49 @@
 package arrays;
 
 public class Array1 {
-	
-	
-	
+
 	public static void main(String[] args) {
-		// Á¤¼ö 5°³¸¦ ÀúÀåÇÒ ¹è¿­ ¼±¾ğ
+		// ì •ìˆ˜ 5ê°œë¥¼ ì €ì¥í•  ë°°ì—´ ì„ ì–¸
 		int[] arr = new int[5];
+		//ê°’ì„ ì¶”ê°€
 		arr[0] = 1;
 		arr[1] = 2;
+		arr[2] = 3;
+		arr[3] = 4;
+		arr[4] = 5;
 		
-		System.out.println("¹è¿­ÀÇ ±æÀÌ(Å©±â): " + arr.length);
+		System.out.println("ë°°ì—´ì˜ ê¸¸ì´(í¬ê¸°): " + arr.length);  //5
 		System.out.println(arr[0]);
 		
+		//ê°’ ìˆ˜ì •(ë³€ê²½)
 		arr[2] = 7;
 		
-		//¹è¿­ÀÇ ¿ä¼Ò ÀüÃ¼ Ãâ·Â
-		for(int i = 0;i<5;i++) {
-			System.out.println(arr[i]+ " ");
+		//ë°°ì—´ì˜ ìš”ì†Œ ì „ì²´ ì¶œë ¥
+		for(int i=0; i<5; i++) {
+			System.out.print(arr[i] + " ");
 		}
-		//5°³ÀÇ Å©±â¸¦ °¡Áø Á¤¼öÇü ¹è¿­ ¼±¾ğ
-		int[] arr2 = {2, 4, 6, 8, 10};
+		System.out.println();
 		
-		//4¹ø ÀÎµ¦½ºÀÇ °ªÀ» 100À¸·Î º¯°æ
-		arr2[4] = 100;
+		//5ê°œì˜ í¬ê¸°ë¥¼ ê°€ì§„ ì •ìˆ˜í˜• ë°°ì—´ ì„ ì–¸
+		int[] arr2 = {2, 4, 6, 8, 10};
 		
 		System.out.println(arr2[1]);
 		
-		//ÀüÃ¼ Ãâ·Â
-		for(int j = 0; j < arr.length; j++) {
+		//4ë²ˆ ì¸ë±ìŠ¤ì˜ ê°’ì„ 100ìœ¼ë¡œ ë³€ê²½
+		arr2[4] = 100;
+		
+		//ì „ì²´ ì¶œë ¥
+		for(int j = 0; j < arr2.length; j++) {
 			System.out.print(arr2[j] + " ");
 		}
+		System.out.println();
 		
+		//2ì™€ 4 ë”í•˜ê¸°
+		System.out.println(arr2[0] + arr2[1]);
+		
+		//2ì™€ 4ì˜ ëŒ€ì†Œë¹„êµ
+		System.out.println(arr2[0] > arr2[1]);
 		
 	}
-	
-}	
+
+}

@@ -3,25 +3,28 @@ package whileexample;
 import java.util.Scanner;
 
 public class KeyRepeat {
-	
+
 	public static void main(String[] args) {
-		// 'y'Å° - °è¼Ó¹İº¹, 'n'Å° - ¹İº¹Áß´Ü, ÀÌ¿ÜÀÇ Å° - "Áö¿øÇÏÁö ¾Ê´Â Å°ÀÔ´Ï´Ù"
-		// key == 'y'(ºñ±³ ¾ÈµÊ), ¹®ÀÚ¿­ºñ±³ equals() ¸Ş¼Òµå »ç¿ë
+		// "y"í‚¤ - "ê³„ì†ë°˜ë³µ", "n'í‚¤ - "ë°˜ë³µì¤‘ë‹¨", ì´ì™¸ì˜ í‚¤ - "ì§€ì›í•˜ì§€ ì•ŠëŠ” í‚¤ ì¶œë ¥"
+		// key == 'y'(ë¹„êµ ì•ˆë¨), ë¬¸ìì—´ë¹„êµ equals() ë©”ì„œë“œ ì‚¬ìš©
 		Scanner sc = new Scanner(System.in);
+		
 		while(true) {
-			System.out.println("°è¼Ó ¹İº¹ÇÒ±î¿ä?(y/n) ");
-			String key = sc.nextLine();
+			System.out.print("ê³„ì† ë°˜ë³µí• ê¹Œìš”?(y/n) ");
 			
+			String key = sc.nextLine();  //Stringí˜•ì´ë¯€ë¡œ ìŒë”°ì˜´í‘œë¥¼ ì‚¬ìš©.
+
 			if(key.equals("y") || key.equals("Y")) {
-				System.out.println("°è¼Ó ¹İº¹");
-			} else if(key.equals("n") || key.equals("N")) {
-				System.out.println("¹İº¹ Áß´Ü");
+				System.out.println("ê³„ì† ë°˜ë³µ");
+			}else if(key.equals("n") || key.equals("N")) {
+				System.out.println("ë°˜ë³µ ì¤‘ë‹¨");
 				break;
-			} else {
-				System.out.println("Áö¿øÇÏÁö ¾Ê´Â Å°ÀÔ´Ï´Ù.");
+			}else {
+				System.out.println("ì§€ì›í•˜ì§€ ì•ŠëŠ” í‚¤ì…ë‹ˆë‹¤.");
 			}
 		}
-		System.out.println("ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù.");
+		System.out.println("í”„ë¡œê·¸ë¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");
 		sc.close();
 	}
+
 }

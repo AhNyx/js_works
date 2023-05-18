@@ -3,22 +3,21 @@ package constant;
 import java.util.Scanner;
 
 public class KmToMile {
+
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		
-		final double RATE_KPH_MPH = 1.609344; // º¯È¯ »ó¼ö
-		double kph = 0.0; // km/h
-		double mph = 0.0; // mile/h
+		final double RATE_KPH_MPH = 1.609344;
+		double kph = 0.0;
+		double mph = 0.0;
 		
-		System.out.println("´ç½ÅÀÇ ±¸¼ÓÀ» ÀÔ·ÂÇÏ¼¼¿ä(km/h) : ");
+		System.out.print("ë‹¹ì‹ ì˜ êµ¬ì†ì„ ì…ë ¥í•˜ì„¸ìš”(km/h) ");
 		kph = scan.nextDouble();
 		
-		//mile = km / º¯È¯ »ó¼ö
 		mph = kph / RATE_KPH_MPH;
 		
-		//printf("¹®ÀÚ¿­ Æ÷¸Ë", °´Ã¼)
-		System.out.printf("°øÀÇ ¼Óµµ´Â %.2f[MPH]ÀÔ´Ï´Ù.", mph);
+		System.out.printf("ê³µì˜ ì†ë„ëŠ” %.2f[MPH]ì…ë‹ˆë‹¤.", mph);
 		scan.close();
-		
 	}
+
 }

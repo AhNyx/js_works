@@ -3,10 +3,12 @@ package ifexample;
 public class Switchcase1 {
 
 	public static void main(String[] args) {
-		// switch ~ case¹® (Á¶°ÇÀÇ °ªÀÌ Á¤ÇØÁ® ÀÖÀ»¶§ ÁÖ·Î »ç¿ë)
-		// ¼øÀ§¿¡ µû¸¥ ¸Ş´Ş »ö»ó Ãâ·Â
-		int rank = 4;
-		String medalColor = "";
+		// switch ~ caseë¬¸ (ì¡°ê±´ì˜ ê°’ì´ ì •í•´ì ¸ ìˆì„ë•Œ ì£¼ë¡œ ì‚¬ìš©)
+		// ìˆœìœ„ì— ë”°ë¥¸ ë©”ë‹¬ ìƒ‰ìƒ ì¶œë ¥
+		int rank = 3;
+		//char medalColor = ' ';  //ê³µë°± ë¬¸ìë¡œ ì´ˆê¸°í™”
+		String medalColor = "Silver";
+		
 		switch(rank) {
 		case 1:
 			medalColor = "Gold";
@@ -15,16 +17,13 @@ public class Switchcase1 {
 			medalColor = "Silver";
 			break;
 		case 3:
-			medalColor = "Bronze";
+			medalColor = "Bronz";
 			break;
-		default :
+		default:
 			medalColor = "None";
 			break;
 		}
-		System.out.println(medalColor);
-		
-		
-		
+		System.out.println("ë©”ë‹¬ ìƒ‰ê¹”ì€ " + medalColor + "ì…ë‹ˆë‹¤.");
 	}
 
 }

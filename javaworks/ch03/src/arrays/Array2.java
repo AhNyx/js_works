@@ -1,34 +1,29 @@
 package arrays;
 
 public class Array2 {
+
 	public static void main(String[] args) {
-		
-		// ¹®ÀÚ¿­Çü ¹è¿­ ¼±¾ğ ¹× »ç¿ë
+		// ë¬¸ìì—´í˜• ë°°ì—´ ì„ ì–¸ ë° ì‚¬ìš©
 		String[] cars = {"Morning", "Sonata", "Sportage", "K7"};
 		
-		//"Sonata"¸¦ °Ë»öÇÏ½Ã¿À
+		//"Sonata"ë¥¼ ê²€ìƒ‰í•˜ì‹œì˜¤
 		System.out.println(cars[1]);
 		
-		//K7À» BMW·Î º¯°æÇÏ½Ã¿À
+		//K7ì„ BMWë¡œ ë³€ê²½í•˜ì‹œì˜¤
 		cars[3] = "BMW";
-		System.out.println(cars[3]);
 		
-		//ÀüÃ¼ Ãâ·Â
-		
-		for(int i=0;i<cars.length;i++) {
-			System.out.println(cars[i]);
+		//ì „ì²´ ì¶œë ¥
+		for(int i = 0; i < cars.length; i++) {
+			System.out.print(cars[i] + " ");
 		}
+		System.out.println();
 		
-		//Çâ»óµÈ for¹®
-		//for(ÀÚ·áÇü º¯¼ö : ¹è¿­ÀÌ¸§){}
+		//í–¥ìƒëœ forë¬¸
+		//for(ìë£Œí˜• ë³€ìˆ˜ : ë°°ì—´ì´ë¦„){}
 		for(String car : cars) {
 			System.out.print(car + " ");
 		}
-	
-		
-		
-		
-		
-		
+
 	}
+
 }

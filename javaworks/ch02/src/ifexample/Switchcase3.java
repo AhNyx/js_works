@@ -1,34 +1,32 @@
 package ifexample;
 
-public class Switchcase3 {
+public class SwitchCase3 {
 
 	public static void main(String[] args) {
-		
-		String operator = "*";
-		int result = 0;
+		// 두 수의 사칙 연산 프로그램
 		int num1 = 10;
-		int num2 = 10;
-		
+		int num2 = 2;
+		char operator = '*';
+		int result = 0;
 		
 		switch(operator) {
-		case "+":
+		case '+':
 			result = num1 + num2;
 			break;
-		case "-":
+		case '-':
 			result = num1 - num2;
 			break;
-		case "*":
+		case '*':
 			result = num1 * num2;
 			break;
-		case "/":
+		case '/':
 			result = num1 / num2;
 			break;
+		default:
+			System.out.println("연산자 오류입니다.");
+			break;
 		}
-		System.out.println(result);
-						
-		
-		
-		
+		System.out.println("결과는 " + result + "입니다.");
 	}
 
 }

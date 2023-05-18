@@ -1,19 +1,21 @@
 package whileexample;
 
 public class While2 {
+
 	public static void main(String[] args) {
-		// while¹® - ¹İº¹Á¶°Ç¹®(if~ break)
+		// whileë¬¸ - ë°˜ë³µì¡°ê±´ë¬¸(if~ break)
 		int i = 0;
 		int sumVal = 0;
 		
 		while(true) {
 			i++;
-			if(i > 10) {
+			if(i > 10) {  //i=11ì¼ë•Œ break ì‹¤í–‰ë¨
 				break;
 			}
 			sumVal += i;
 			System.out.println(i);
 		}
-		System.out.println("ÇÕ°è: " + sumVal);
+		System.out.println("í•©ê³„: " + sumVal);
 	}
+
 }

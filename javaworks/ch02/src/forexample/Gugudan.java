@@ -1,19 +1,15 @@
 package forexample;
 
 public class Gugudan {
+
 	public static void main(String[] args) {
-		// ÀüÃ¼ ±¸±¸´Ü Ãâ·Â
-		
-		for(int i=2;i<10;i++) {
-			for(int j=1;j<10;j++) {
-				System.out.println(i+"*"+j+"="+i*j );
+		// ì „ì²´ êµ¬êµ¬ë‹¨ ì¶œë ¥
+		for(int i=2; i<10; i++) {
+			for(int j=1; j<10; j++) {
+				System.out.println(i + "x" + j + "=" + (i*j));
 			}
+			System.out.println();
 		}
-		
-		
-		
-		
-		
-		
 	}
+
 }

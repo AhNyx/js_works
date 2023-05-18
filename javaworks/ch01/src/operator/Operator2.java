@@ -3,22 +3,23 @@ package operator;
 public class Operator2 {
 
 	public static void main(String[] args) {
-		// ºñ±³ ¿¬»ê : >, <, ==, !=
+		// ë¹„êµ ì—°ì‚° : >, <, ==, !=
 		int num1 = 7, num2 = 3;
+		
 		System.out.println(num1 > num2);
 		System.out.println(num1 < num2);
-		System.out.println(num1 == num2);
-		System.out.println(num1 != num2);
-		// ³í¸® ¿¬»ê
-		// && - ³í¸®°ö (ºñ±³´ë»ó ¸ğµÎ trueÀÌ¸é true)
-		// || - ³í¸®ÇÕ (ºñ±³´ë»ó ÇÏ³ª¸¸ trueÀÌ¸é true)
-		// ! - ³í¸®ºÎÁ¤ (ºñ±³Á¶°ÇÀÌ trueÀÌ¸é false)
+		System.out.println(num1 == num2); //ê°™ë‹¤
+		System.out.println(num1 != num2); //ê°™ì§€ ì•Šë‹¤.
 		
-		System.out.println((num1 < num2) && (num1 != num2));
-		System.out.println((num1 < num2) || (num1 != num2));
-		System.out.println((num1 != num2));
-		
-		
+		//ë…¼ë¦¬ ì—°ì‚°
+		/*
+		   && - ë…¼ë¦¬ê³± (ë¹„êµëŒ€ìƒ ëª¨ë‘ trueì´ë©´ true)
+		   || - ë…¼ë¦¬í•©(ë¹„êµëŒ€ìƒ í•˜ë‚˜ë§Œ trueì´ë©´ true)
+		   ! -ë…¼ë¦¬ë¶€ì •(ë¹„êµì¡°ê±´ì´ trueì´ë©´ false)
+		 */
+		System.out.println((num1 < num2) && (num1 != num2)); //false
+		System.out.println((num1 < num2) || (num1 != num2)); //true
+		System.out.println(!(num1 != num2)); //false
 	}
 
 }

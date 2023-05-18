@@ -3,8 +3,8 @@ package arrays;
 public class ArrayAlphabet {
 
 	public static void main(String[] args) {
-		
-		// 1ºÎÅÍ 10±îÁö ÀúÀåÇÏ´Â ¹è¿­
+		// 1ë¶€í„° 10ê¹Œì§€ ì €ìž¥í•˜ëŠ” ë°°ì—´
+		// numbers ë°°ì—´, ê°ì²´-> íž™ ë©”ëª¨ë¦¬
 		int[] numbers = new int[10];
 		
 		for(int i = 0; i < numbers.length; i++) {
@@ -12,18 +12,26 @@ public class ArrayAlphabet {
 			//System.out.print(numbers[i] + " ");
 		}
 		
-		//¾ËÆÄºª ´ë¹®ÀÚ - ÀúÀå(26°³)
+		//ì•ŒíŒŒë²³ ëŒ€ë¬¸ìž - ì €ìž¥(26ê°œ)
 		char[] alphabets = new char[26];
 		char ch = 'A';
 		
-		alphabets[0] = ch;
-		alphabets[1] = (char) (ch+1);
-
-		for(int i=0;i < alphabets.length; i++) {
-			alphabets[i] = (char)(ch + i);
-			System.out.print(alphabets[i] + " ");
+		/*alphabets[0] = ch;
+		alphabets[1] = (char) (ch + 1);  //charí˜•ìœ¼ë¡œ ê°•ì œ í˜•ë³€í™˜
+		
+		System.out.print(alphabets[0]);
+		System.out.print(alphabets[1]);*/
+		
+		//ì•ŒíŒŒë²³ 26ìž ì €ìž¥
+		for(int i = 0; i < alphabets.length; i++) {
+			alphabets[i] = ch;
+			//ch = (char) (ch + 1); //ë¬¸ìžë¥¼ 1ê°œ ì¦ê°€
+			ch++;
 		}
 		
+		for(int i = 0; i < alphabets.length; i++) {
+			System.out.println(alphabets[i] + ", " + (int)alphabets[i]);
+		}
 	}
 
 }

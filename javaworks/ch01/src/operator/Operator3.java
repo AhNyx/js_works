@@ -3,13 +3,14 @@ package operator;
 public class Operator3 {
 
 	public static void main(String[] args) {
-		// Á¶°Ç ¿¬»êÀÚ - ºñ±³¹® ? Âü : °ÅÁş
+		// ì¡°ê±´ ì—°ì‚°ì - ë¹„êµë¬¸ ? ì°¸ : ê±°ì§“
 		boolean bool = (5 > 3) ? true : false;
 		//char ch = (5 > 3) ? 'T' : 'F';
+		
 		System.out.println(bool);
 		//System.out.println(ch);
 		
-		//ºÎ¸ğ´ÔÀÇ ³ªÀÌ ºñ±³
+		//ë¶€ëª¨ë‹˜ì˜ ë‚˜ì´ ë¹„êµ
 		int fatherAge = 45;
 		int motherAge = 47;
 		

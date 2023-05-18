@@ -2,21 +2,21 @@ package input;
 
 import java.util.Scanner;
 
-public class input1 {
+public class Input1 {
 
 	public static void main(String[] args) {
-		
+		// ì…ë ¥ ì²˜ë¦¬ - Scanner
+		// java.util.Scanner í´ë˜ìŠ¤ë¥¼ importí•˜ì—¬ ì‚¬ìš©í•¨
 		Scanner scan = new Scanner(System.in);
-			
-		System.out.print("´ç½ÅÀÇ ÀÌ¸§Àº ¹«¾ùÀÔ´Ï±î?");
-		String name = scan.nextLine();
 		
-		System.out.println("´ç½ÅÀÇ ÀÌ¸§Àº"+name+"ÀÌ±º¿ä!");
-	 	System.out.println("´ç½ÅÀÇ ³ªÀÌ´Â ¸î ¼¼ ÀÔ´Ï±î?");
-	 	int age = scan.nextInt();
-	 	System.out.println("´ç½ÅÀÇ ³ªÀÌ´Â" + age + "¼¼ ÀÌ±º¿ä!");
-	 	scan.close();
-	 			
+		System.out.print("ë‹¹ì‹ ì˜ ì´ë¦„ì€ ë¬´ì—‡ì…ë‹ˆê¹Œ? ");
+		String name = scan.nextLine();  //ì½˜ì†”ì°½ì— ì´ë¦„ ì…ë ¥
+		System.out.println("ë‹¹ì‹ ì˜ ì´ë¦„ì€ " + name + "ì´êµ°ìš”!");
+		
+		System.out.print("ë‹¹ì‹ ì˜ ë‚˜ì´ëŠ” ëª‡ ì„¸ì…ë‹ˆê¹Œ? ");
+		int age = scan.nextInt();
+		System.out.println("ë‹¹ì‹ ì˜ ë‚˜ì´ëŠ” " + age + "ì„¸ ì´êµ°ìš”!");
+		
+		scan.close();  //ë‹«ê¸°
 	}
-
 }

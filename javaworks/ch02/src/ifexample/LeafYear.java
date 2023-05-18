@@ -3,19 +3,22 @@ package ifexample;
 import java.util.Scanner;
 
 public class LeafYear {
+
 	public static void main(String[] args) {
-		// À±³âÀ» ÆÇº°ÇÏ´Â ÇÁ·Î±×·¥(¿¬µµ¸¦ ÀÔ·Â¹ŞÀ½)
-		// 4³â ¸¶´Ù ¿À°í, 100³â ´ÜÀ§´Â À±³âÀÌ ¾Æ´Ï³ª, 400³â ´ÜÀ§´Â À±³âÀÓ
-		// year % 4 == 0 && year % 100 != 0 || year % 400 == 0
-		Scanner scan = new Scanner(System.in);
-		System.out.println("¿¬µµ¸¦ ÀÔ·ÂÇÏ¼¼¿ä ");
-		int year = scan.nextInt();
-		scan.close();
-		if(year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
-			System.out.println("À±³âÀÔ´Ï´Ù");
-		} else {
-			System.out.println("Æò³âÀÔ´Ï´Ù");
+		// ìœ¤ë…„ì„ íŒë³„í•˜ëŠ” í”„ë¡œê·¸ë¨(ì—°ë„ë¥¼ ì…ë ¥ë°›ìŒ)
+		// 4ë…„ ë§ˆë‹¤ ì˜¤ê³ , 100ë…„ ë‹¨ìœ„ëŠ” ìœ¤ë…„ì´ ì•„ë‹ˆë‚˜, 400ë…„ ë‹¨ìœ„ëŠ” ìœ¤ë…„ì„
+		// year % 4 == 0 && year % 100 !=0 || year % 400 == 0
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("ì—°ë„ë¥¼ ì…ë ¥í•˜ì„¸ìš”: ");
+		int year = sc.nextInt();
+		
+		if(year % 4 == 0 && year % 100 !=0 || year % 400 ==0) {
+			System.out.println("ìœ¤ë…„ì…ë‹ˆë‹¤.");
+		}else {
+			System.out.println("í‰ë…„ì…ë‹ˆë‹¤.");
 		}
 		
+		sc.close();
 	}
 }

@@ -5,29 +5,31 @@ import java.util.Scanner;
 public class Seat {
 
 	public static void main(String[] args) {
-		// ÀÔÀå°´ ¼ö¿¡ µû¸¥ ¿­°ú ÁÙ¼ö °è»êÇÏ±â
+		// ì…ì¥ê° ìˆ˜ì— ë”°ë¥¸ ì—´ê³¼ ì¤„ìˆ˜ ê³„ì‚°í•˜ê¸°
 		Scanner sc = new Scanner(System.in);
-		int customer; //ÀÔÀå°´ ¼ö ÀúÀå
-		int colNum; //ÁÂ¼® ¿­ ¼ö ÀúÀå
-		int rowNum; //ÁÙ(Çà)ÀÇ ¼ö ÀúÀå
+		int customer; //ì…ì¥ê° ìˆ˜ ì €ì¥
+		int colNum;   //ì¢Œì„ ì—´ ìˆ˜ ì €ì¥
+		int rowNum;   //ì¤„(í–‰)ì˜ ìˆ˜ ì €ì¥
 		
-		System.out.println("ÀÔÀå°´ ¼ö ÀÔ·Â : ");
+		System.out.print("ì…ì¥ê° ìˆ˜ ì…ë ¥ : ");
 		customer = sc.nextInt();
 		
-		System.out.println("ÁÂ¼® ¿­ ¼ö ÀÔ·Â : ");
+		System.out.print("ì¢Œì„ ì—´ ìˆ˜ ì…ë ¥ : ");
 		colNum = sc.nextInt();
-		//¿¬»ê Ã³¸® (Á¶°Ç¹®)
 		
+		//ì—°ì‚° ì²˜ë¦¬(ì¡°ê±´ë¬¸) - ë‚˜ëˆ„ì–´ ë–¨ì–´ì§€ëŠ” ê²½ìš°, ì¤„ìˆ˜ì— 1ì„ ë”í•˜ëŠ” ê²½ìš°
 		if(customer % colNum == 0) {
-			rowNum = customer / colNum;
-		} else {
-			rowNum = (int)(customer / colNum) + 1;
+			rowNum = customer / colNum;  //ë‚˜ëˆ„ëŠ” ëª«
+		}else {
+			rowNum = (int)(customer / colNum) + 1;  //ëª« + 1
+//			rowNum = customer / colNum + 1;  //ëª« + 1
 		}
 		
+//		System.out.println(rowNum + "ê°œì˜ ì¤„ì´ í•„ìš”í•©ë‹ˆë‹¤.");
+		System.out.printf("%dê°œì˜ ì¤„ì´ í•„ìš”í•©ë‹ˆë‹¤.\n", rowNum);
+//		System.out.println(customer);
+//		System.out.println(colNum);
 		
-		
-
-		System.out.println(rowNum + "°³ÀÇ ÁÙÀÌ ÇÊ¿äÇÕ´Ï´Ù.");
+		sc.close();
 	}
-
 }

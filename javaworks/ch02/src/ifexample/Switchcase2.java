@@ -1,29 +1,28 @@
 package ifexample;
 
-public class Switchcase2 {
-	
+public class SwitchCase2 {
+
 	public static void main(String[] args) {
-		// case¹® µ¿½Ã¿¡ »ç¿ëÇÏ±â'
-		int month = 5;
-		int day = 0;
-		switch(month){
-		case 1: case 3: case 5: case 7: case 8: case 10:  case 12:
+		// caseë¬¸ ë™ì‹œì— ì‚¬ìš©í•˜ê¸°
+		int month = 5;  //ì›”ì„ ì €ì¥í•  ë³€ìˆ˜
+		int day = 0;    //ì¼ì„ ì €ì¥í•  ë³€ìˆ˜
+		
+		switch(month) {
+		case 1: case 3: case 5: case 7: case 8: case 10: case 12:
 			day = 31;
 			break;
-		case 4: case 6: case 9: case 11:                                                                                                          
-	 		day = 30;
+		case 4: case 6: case 9: case 11:
+			day = 30;
 			break;
 		case 2:
 			day = 28;
 			break;
 		default:
-			System.out.println("Áö¿øµÇÁö ¾Ê´Â ±â´ÉÀÔ´Ï´Ù.");
-			return;
-			
-
+			System.out.println("ì§€ì›ë˜ì§€ ì•ŠëŠ” ê¸°ëŠ¥ì…ë‹ˆë‹¤.");
+			return;  //í”„ë¡œê·¸ë¨ì´ ì¦‰ì‹œ ì¢…ë£Œ
 		}
-		
-		System.out.println(month + "¿ùÀº" + day + "ÀÏÀÔ´Ï´Ù");
-		
+		System.out.println(month + "ì›”ì€ " + day + "ì¼ê¹Œì§€ ìˆìŠµë‹ˆë‹¤.");
+		System.out.printf("%dì›”ì€ %dì¼ê¹Œì§€ ìˆìŠµë‹ˆë‹¤.", month, day);
 	}
+
 }
