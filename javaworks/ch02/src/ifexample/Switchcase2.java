@@ -1,6 +1,6 @@
 package ifexample;
 
-public class SwitchCase2 {
+public class Switchcase2 {
 
 	public static void main(String[] args) {
 		// case문 동시에 사용하기

@@ -2,8 +2,8 @@
  * 
  */
 /**
- * @author Administrator
+ * @author kiyon
  *
  */
-module ch02 {
+module ch {
 }
