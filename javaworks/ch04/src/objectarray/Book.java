@@ -4,31 +4,30 @@ public class Book {
 	String bookName;
 	String author;
 	
-	Book(){}
+	public Book(){}
 	
-	Book(String bookName, String author){
+	public Book(String bookName, String author){
 		this.bookName = bookName;
 		this.author = author;
 	}
 	
-	void bookInfo() {
+	public void bookInfo() {
 		System.out.println(bookName + ", " + author);
 	}
-	
-	void setBookName(String bookName) {
-		this.bookName = bookName;
-	}
-	
-	void setAuthor(String author) {
-		this.author = author;
-	}
-	
-	String getBookName() {
+
+	public String getBookName() {
 		return bookName;
 	}
-	
-	String getAuthor() {
+
+	public void setBookName(String bookName) {
+		this.bookName = bookName;
+	}
+
+	public String getAuthor() {
 		return author;
 	}
-	
+
+	public void setAuthor(String author) {
+		this.author = author;
+	}
 }
