@@ -1,36 +1,42 @@
 package arrays;
 
 public class ArrayCopy {
+
 	public static void main(String[] args) {
-		//¹è¿­ÀÇ º¹»ç
-		//1. ±âÁ¸ ¹è¿­°ú ÀÚ·áÇü ¹× ¹è¿­ Å©±â°¡ ¶È°°Àº ¹è¿­À» »õ·Î ¸¸µé¶§
-		//2. ¹è¿­ÀÇ ¸ğµç ¿ä¼Ò¿¡ ÀÚ·á°¡ ²Ë Â÷¼­ ´õ Å« ¹è¿­À» ¸¸µé¶§
+		// ë°°ì—´ì˜ ë³µì‚¬
+		// 1. ê¸°ì¡´ ë°°ì—´ê³¼ ìë£Œí˜• ë° ë°°ì—´ í¬ê¸°ê°€ ë˜‘ê°™ì€ ë°°ì—´ì„ ìƒˆë¡œ ë§Œë“¤ë•Œ
+		// 2. ë°°ì—´ì˜ ëª¨ë“  ìš”ì†Œì— ìë£Œê°€ ê½‰ ì°¨ì„œ ë” í° ë°°ì—´ì„ ë§Œë“¤ë•Œ
 		
+		//int[] arr1 = {10, 20, 30, 40, 50};
 		int[] arr1 = new int[] {10, 20, 30, 40, 50};
-		int[] arr2 = new int[5];
+		int[] arr2 = new int[5]; 
 		
 		for(int i=0; i<arr1.length; i++) {
 			System.out.print(arr1[i] + " ");
 		}
 		System.out.println();
-		for(int i=0; i<arr1.length; i++) {
-			arr2[i] = arr1[i];
+		
+		for(int i=0; i<arr2.length; i++) {
+			arr2[i] = arr1[i];  //arr1ì„ arr2ì— ë³µì‚¬í•¨
 			System.out.print(arr2[i] + " ");
 		}
-		System.out.println();
-		// 2. clone() ¸Ş¼Òµå »ç¿ë
-
+		System.out.println();  //ì¤„ë°”ê¿ˆ
+		
+		//2. ê¸°ë³¸ ì œê³µë˜ëŠ” clone() ë©”ì„œë“œ ì‚¬ìš©
 		int[] arr3 = new int[5];
 		arr3 = arr1.clone();
-		for(int i : arr3) {
-			System.out.print(i + " ");
-		}
 		
+		for(int i : arr3)
+			System.out.print(i + " ");
 		System.out.println();
+		
+		//3. System í´ë˜ìŠ¤ì˜ arraycopy() ë©”ì„œë“œ ì‚¬ìš©
 		int[] arr4 = new int[5];
-		//3. System Å¬·¡½ºÀÇ arraycopy() ¸Ş¼Òµå »ç¿ë
+		//arraycopy(ì›ë³¸ë°°ì—´, ë°°ì—´ì˜ ì¸ë±ìŠ¤, ì‚¬ë³¸ë°°ì—´, ë°°ì—´ì˜ ì¸ë±ìŠ¤, ë°°ì—´ì˜ í¬ê¸°)
 		System.arraycopy(arr1, 0, arr4, 0, 5);
 		
-		for(int i : arr4) System.out.print(i + " ");
+		for(int i : arr4)
+			System.out.print(i + " ");
 	}
+
 }
