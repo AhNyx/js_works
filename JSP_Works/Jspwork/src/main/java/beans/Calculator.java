@@ -4,10 +4,10 @@ package beans;
 // 계산기 자료형 (VO + DAO)
 public class Calculator {
 	//필드
-	private int num1 = 0;
-	private int num2 = 0;
-	private String op = "";
-	private int result = 0;
+	private int num1;
+	private int num2;
+	private String op;
+	private int result;
 	
 	//계산하기 - 메소드
 	public int calculator() {
