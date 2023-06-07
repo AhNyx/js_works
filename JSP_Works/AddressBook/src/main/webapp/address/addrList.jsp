@@ -17,7 +17,7 @@
 		<table id="tbl_list">
 			<thead>
 				<tr>
-					<th>이름</th><th>전화번호</th><th>이메일</th><th>성별</th>
+					<th>이름</th><th>전화번호</th><th>이메일</th><th>성별</th><th>보기</th><th>삭제</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -25,14 +25,14 @@
 				<%
 					for(int i=0;i<abDAO.getList().size();i++){
 						AddrBook aB = abDAO.getList().get(i);
-					
-				
 				%>
 				<tr>
 					<td><%= aB.getUsername() %></td>
 					<td><%= aB.getTel() %></td>
 					<td><%= aB.getEmail() %></td>
 					<td><%= aB.getGender() %></td>
+					<td><a href="addrView.jsp?username=<%= aB.getUsername() %>"><button type="button">보기</button></a></td>
+					<td><a href="addrDelete.jsp?username=<%= aB.getUsername() %>" onclick="return confirm('정말로 삭제하시겠습니까?')"><button type="button">삭제</button></a></td>
 				</tr>
 				<%
 					}
