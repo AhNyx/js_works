@@ -8,11 +8,21 @@ public class StringIndexOf {
 		int location = subject.indexOf("프로그래밍");
 		System.out.println(location);
 		
-		if(location != -1) {
+		if(location != -1) { // 못찾으면 -1을 반환 , location >= 0
 			System.out.println("자바와 관련된 책이군요");
 		} else {
 			System.out.println("자바와 관련이 없는 책이군요");
 		}
+		
+		//lastIndexOf()
+		String uri = "/board/boardList.jsp";
+		
+		int uri_idx1 = uri.indexOf('/');
+		System.out.println(uri_idx1);
+		
+		int uri_idx2 = uri.lastIndexOf('/');
+		System.out.println(uri_idx2);
+		
 		
 	}
 }
