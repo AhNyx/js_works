@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 
 import common.JDBCUtil;
@@ -85,6 +86,47 @@ public class BoardDAO {
 		}
 		return board;
 	}
+	
+	//게시글 삭제
+	public void boardDelete(int bnum) {
+		conn = JDBCUtil.getConnection();
+		String sql = "DELETE FROM t_board WHERE bnum = ?";
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, bnum);
+			pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			JDBCUtil.close(conn, pstmt, rs);
+		}
+	}
+	
+	//게시글 수정
+	public void updateBoard(Board board) {
+		//현재 시간 객체 생성
+		Timestamp now = new Timestamp(System.currentTimeMillis());
+		
+		conn = JDBCUtil.getConnection();
+		String sql = "UPDATE t_board SET title=?, content=?, "
+				+ "modifydate=? WHERE bnum = ?";
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, board.getTitle());
+			pstmt.setString(2,  board.getContent());
+			pstmt.setTimestamp(3, now);
+			pstmt.setInt(4, board.getBnum());
+			pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			JDBCUtil.close(conn, pstmt, rs);
+		}
+	}
+	
+	
+	
+	
 }
 
 

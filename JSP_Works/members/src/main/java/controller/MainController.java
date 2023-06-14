@@ -122,8 +122,27 @@ public class MainController extends HttpServlet {
 		}	else if(command.equals("/deleteMember.do")) {
 			String memberId = request.getParameter("memberId");
 			memberDAO.deleteMember(memberId);
-			nextPage = "memberList.do";
+			nextPage = "/memberList.do";	
+		} else if(command.equals("/updateBoard.do")) {
+			int bnum = Integer.parseInt(request.getParameter("bnum"));
+			Board board = boardDAO.getBoard(bnum);
 			
+			request.setAttribute("board", board);
+			
+			nextPage = "/board/updateBoard.jsp";
+		} else if(command.equals("/updateProcess.do")) {
+			//수정 폼에서 입력 내용 받기
+			int bnum = Integer.parseInt(request.getParameter("bnum"));
+			String title = request.getParameter("title");
+			String content = request.getParameter("content");
+						
+			Board updateBoard = new Board();
+			updateBoard.setTitle(title);
+			updateBoard.setContent(content);
+			updateBoard.setBnum(bnum);
+			boardDAO.updateBoard(updateBoard);
+			
+			nextPage = "/boardList.do";
 		}
 		
 		//게시판 관리
@@ -156,7 +175,14 @@ public class MainController extends HttpServlet {
 			request.setAttribute("board", board);
 			
 			nextPage = "/board/boardView.jsp";
+		} else if(command.equals("/memberEvent.do")) {
+			
+			
+			nextPage = "/member/memberEvent.jsp";
 		}
+		
+		
+		
 		
 		//포워딩 - 새로고침 자동 저장 오류 해결 : response.sendRedirect()
 		if(command.equals("/addBoard.do")) {

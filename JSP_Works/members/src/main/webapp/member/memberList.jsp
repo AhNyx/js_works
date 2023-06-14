@@ -51,7 +51,11 @@
 			</tbody>
 		</table>
 		</section>
+		<h3>이벤트 추첨 링크</h3>
+		<br>
+		<a href="/memberEvent.do"><img alt="asdasd" src="../resources/images/bronx.png"></a>
 	</div>
+	
 	<jsp:include page="../footer.jsp" />
 </body>
 </html>
