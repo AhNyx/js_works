@@ -120,6 +120,31 @@ public class MemberDAO {
 		}
 	}
 	
+	//ID 중복 체크
+	public boolean duplicatedID(String memberId) {
+		
+		conn = JDBCUtil.getConnection();
+		boolean result = false;
+		String sql = "SELECT DECODE(COUNT(*), 1,'true','false') AS result FROM t_member WHERE memberId = ?";
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, memberId);
+			rs = pstmt.executeQuery(); 
+			if(rs.next()) {
+				result = rs.getBoolean("result");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			JDBCUtil.close(conn, pstmt, rs);
+		}
+		
+		return result;
+	}
+	
+	
+	
+	
 }
 
 
