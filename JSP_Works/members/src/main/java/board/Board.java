@@ -14,6 +14,7 @@ public class Board implements Serializable{
 	private Timestamp modifyDate;
 	private int hit;
 	private String memberId;
+	private String fileUpload;
 	
 	//getter, setter ¸Þ¼­µå
 	public int getBnum() {
@@ -24,6 +25,12 @@ public class Board implements Serializable{
 	}
 	public String getTitle() {
 		return title;
+	}
+	public String getFileUpload() {
+		return fileUpload;
+	}
+	public void setFileUpload(String fileUpload) {
+		this.fileUpload = fileUpload;
 	}
 	public void setTitle(String title) {
 		this.title = title;
