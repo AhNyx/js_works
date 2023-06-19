@@ -121,6 +121,28 @@ public class MemberDAO {
 	}
 	
 	//ID 중복 체크
+	public int duplicatedID(String memberId) {
+		
+		conn = JDBCUtil.getConnection();
+		int result = 0;
+		String sql = "SELECT COUNT(*) AS result FROM t_member WHERE memberId = ?";
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, memberId);
+			rs = pstmt.executeQuery(); 
+			if(rs.next()) {
+				result = rs.getInt("result");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			JDBCUtil.close(conn, pstmt, rs);
+		}
+		
+		return result;
+	}
+	
+/*	//ID 중복 체크 (오라클용)
 	public boolean duplicatedID(String memberId) {
 		
 		conn = JDBCUtil.getConnection();
@@ -141,8 +163,7 @@ public class MemberDAO {
 		
 		return result;
 	}
-	
-	
+*/
 	
 	
 }

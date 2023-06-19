@@ -4,6 +4,7 @@ function checkMember(){
 	let pw1 = form.passwd1.value;
 	let pw2 = form.passwd2.value;
 	let name = form.name.value;
+	let btnChk = form.btnChk.value;
 	
 	let pw_pat1 = /[0-9]+/; //숫자만
 	let pw_pat2 = /[a-zA-Z]+/; //영어만
@@ -23,6 +24,9 @@ function checkMember(){
 	} else if (name = "" || pw_pat3.test(name) || pw_pat1.test(name)){
 		alert("이름을 입력해 주세요");
 		form.name.focus();
+		return false;
+	} else if (btnChk == 'N'){
+		alert("아이디 중복을 확인해주세요");
 		return false;
 	} else {
 		form.submit();
