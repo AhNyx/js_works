@@ -154,6 +154,10 @@ public class MainController extends HttpServlet {
 		//霸矫魄 包府
 		if(command.equals("/boardList.do")) {
 			ArrayList<Board> boardList = boardDAO.getBoardList();
+			
+			//其捞瘤 贸府
+			String pageNum = request.getParameter("pageNum");
+			
 			//葛胆 积己
 			request.setAttribute("boardList", boardList);
 			nextPage = "/board/boardList.jsp";

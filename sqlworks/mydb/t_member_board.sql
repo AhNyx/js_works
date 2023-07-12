@@ -11,6 +11,8 @@ INSERT INTO t_member (memberid, passwd, name, gender) VALUES ('cloud', 'm12345',
 
 COMMIT;
 
+SELECT COUNT(*) AS result FROM t_member WHERE memberId = 'cloud';
+
 SELECT * FROM t_member;
 
 CREATE TABLE t_board(
