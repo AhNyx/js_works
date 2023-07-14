@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.sql.Timestamp;
 
 public class Reply implements Serializable{
-	
+
 	private static final long serialVersionUID = 3L;
 	
 	private int rno;
@@ -35,8 +35,8 @@ public class Reply implements Serializable{
 	public String getReplyer() {
 		return replyer;
 	}
-	public void setReplyer(String replayer) {
-		this.replyer = replayer;
+	public void setReplyer(String replyer) {
+		this.replyer = replyer;
 	}
 	public Timestamp getRdate() {
 		return rdate;
@@ -50,5 +50,4 @@ public class Reply implements Serializable{
 	public void setRupdate(Timestamp rupdate) {
 		this.rupdate = rupdate;
 	}
-
 }

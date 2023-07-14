@@ -32,11 +32,11 @@ public class MainController extends HttpServlet {
 	MemberDAO memberDAO;  //MemberDAO 객체 선언
 	BoardDAO boardDAO;
 	ReplyDAO replyDAO;
-	
+
 	public void init(ServletConfig config) throws ServletException {
-		memberDAO = new MemberDAO();  // 회원 관리 객체 생성
-		boardDAO = new BoardDAO(); // 게시글 관리 객체 생성
-		replyDAO = new ReplyDAO(); // 댓글 관리 객체 생성
+		memberDAO = new MemberDAO();  //회원 관리 객체 생성
+		boardDAO = new BoardDAO();    //게시글 관리 객체 생성
+		replyDAO = new ReplyDAO();    //댓글 관리 객체 생성
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -65,7 +65,20 @@ public class MainController extends HttpServlet {
 		//세션 객체 생성
 		HttpSession session = request.getSession();
 		
-		if(command.equals("/memberList.do")) { //회원 목록 조회
+		if(command.equals("/index.do")) {
+			//게시글 가져오기
+			ArrayList<Board> boardList = boardDAO.getBoardList();
+			int size = boardList.size(); //게시글의 총수
+			//최신 글 3개를 담은 배열 생성
+			Board[] newBoardList = {boardList.get(size-1), boardList.get(size-2), 
+					boardList.get(size-3)};
+			
+			//모델 생성
+			request.setAttribute("boardList", newBoardList);
+			
+			//index 페이지로 포워딩
+			nextPage = "main.jsp";
+		}else if(command.equals("/memberList.do")) { //회원 목록 조회
 			ArrayList<Member> memberList = memberDAO.getMemberList();
 			
 			//모델 생성 및 보내기
@@ -128,13 +141,28 @@ public class MainController extends HttpServlet {
 		} else if(command.equals("/logout.do")) {//로그아웃 요청
 			//세션 모두 삭제(해제)
 			session.invalidate();
-			nextPage = "/index.jsp";
+			nextPage = "index.jsp";
 		} else if(command.equals("/deleteMember.do")) { //회원 삭제 요청
 			String memberId = request.getParameter("memberId");
 			memberDAO.deleteMember(memberId); //회원 삭제 처리
+			
 			nextPage = "/memberList.do";
+			
+		} else if(command.equals("/dMember.do")) { //회원 삭제 요청
+			String memberId = request.getParameter("memberId");
+			memberDAO.deleteMember(memberId); //회원 삭제 처리
+			session.invalidate();
+			nextPage = "index.jsp";
 		} else if(command.equals("/memberEvent.do")) { 
 			nextPage = "/member/memberEvent.jsp";
+		} else if(command.equals("/memberUpdateForm.do")) {	
+			String memberId = request.getParameter("memberId");
+			
+		 	Member member = memberDAO.getMember(memberId);
+		 	request.setAttribute("member", member);
+		 	
+			nextPage = "member/memberUpdateForm.jsp";
+		
 		}
 		
 		//게시판 관리
@@ -205,14 +233,13 @@ public class MainController extends HttpServlet {
 			int bnum = Integer.parseInt(request.getParameter("bnum"));
 			Board board = boardDAO.getBoard(bnum);  //글 상세보기 처리
 			
-			ArrayList<Reply> replyList = replyDAO.getReplyList(bnum); // 게시글 가져오기 처리
+			//댓글 리스트 목록보기 처리
+			ArrayList<Reply> replyList = replyDAO.getReplyList(bnum);   
 			
 			
 			//모델 생성
 			request.setAttribute("board", board);
 			request.setAttribute("replyList", replyList);
-			
-			
 			
 			nextPage = "/board/boardView.jsp";
 		}else if(command.equals("/deleteBoard.do")) {
@@ -237,11 +264,51 @@ public class MainController extends HttpServlet {
 			
 			boardDAO.updateBoard(updateBoard); //수정 처리
 			nextPage = "/boardList.do";
+		}else if(command.equals("/addReply.do")) {
+			//댓글 폼에 입력(관련)된 데이터 가져옴
+			int bnum = Integer.parseInt(request.getParameter("bnum"));
+			String rcontent = request.getParameter("rcontent");
+			String replyer = request.getParameter("replyer");
+			
+			Reply newReply = new Reply();
+			newReply.setBnum(bnum);
+			newReply.setRcontent(rcontent);
+			newReply.setReplyer(replyer);
+			
+			replyDAO.addReply(newReply);  //댓글 등록 처리
+		} else if(command.equals("/deleteReply.do")) {
+			int rno = Integer.parseInt(request.getParameter("rno"));
+			replyDAO.deleteReply(rno);
+		}  else if(command.equals("/replyUpdateForm.do")) {
+			int rno = Integer.parseInt(request.getParameter("rno"));
+			
+			Reply reply = replyDAO.getReply(rno);
+			
+			request.setAttribute("reply", reply);
+			
+			nextPage = "board/replyUpdateForm.jsp";
+			
+		} else if (command.equals("/updateReply.do")) {
+			int rno = Integer.parseInt(request.getParameter("rno"));
+			String rcontent = request.getParameter("rcontent");
+			
+			Reply reply = new Reply();
+			reply.setRno(rno);
+			reply.setRcontent(rcontent);
+			
+			replyDAO.updateReply(reply); // 댓글 수정 처리
+			
 		}
 		
 		//포워딩 - 새로고침 자동 저장 오류 해결 : response.sendRedirect()
 		if(command.equals("/addBoard.do")) {
 			response.sendRedirect("/boardList.do");
+		}else if(command.equals("/addReply.do")) {
+			int bnum = Integer.parseInt(request.getParameter("bnum"));
+			response.sendRedirect("/boardView.do?bnum=" + bnum);
+		} else if(command.equals("/deleteReply.do") || (command.equals("/updateReply.do"))) {
+			int bnum = Integer.parseInt(request.getParameter("bnum"));
+			response.sendRedirect("/boardView.do?bnum=" + bnum);
 		}
 		else {
 			RequestDispatcher dispatcher = 

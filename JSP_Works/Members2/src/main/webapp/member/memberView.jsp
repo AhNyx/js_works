@@ -52,6 +52,9 @@
 					<tr>
 						<td colspan="2">
 						   <a href="/memberList.do"><button type="button">목록</button></a>
+							<a href="memberUpdateForm.do?memberId=${member.memberId}"><button type="button">수정</button></a>
+							<a href="/dMember.do?memberId=${member.memberId}"><button type="button">탈퇴</button></a>
+
 						</td>
 					</tr>
 				</tbody>
