@@ -2,9 +2,8 @@ package fileio.serialization;
 
 import java.io.Serializable;
 
-
 //클래스의 직렬화(현재의 상태를 그대로 저장)
-public class Person implements Serializable {
+public class Person implements Serializable{
 
 	private static final long serialVersionUID = 10L;
 	
@@ -19,7 +18,6 @@ public class Person implements Serializable {
 
 	@Override
 	public String toString() {
-		return "name = "+ name + " job = " + job;
+		return name + ", " + job;
 	}
-	
 }

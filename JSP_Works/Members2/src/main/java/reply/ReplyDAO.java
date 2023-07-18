@@ -62,22 +62,22 @@ public class ReplyDAO {
 		}
 	}
 	
-	// 댓글 삭제
+	//댓글 삭제
 	public void deleteReply(int rno) {
 		conn = JDBCUtil.getConnection();
 		String sql = "delete from t_reply where rno = ?";
 		try {
-			pstmt = conn.prepareStatement(sql);
+			pstmt =conn.prepareStatement(sql);
 			pstmt.setInt(1, rno);
-			pstmt.executeUpdate();
-		} catch(Exception e) {
+			pstmt.executeUpdate();  //삭제 처리
+		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
 			JDBCUtil.close(conn, pstmt);
 		}
-		
 	}
 	
+	//특정 댓글 상세보기
 	public Reply getReply(int rno) {
 		Reply reply = new Reply();
 		conn = JDBCUtil.getConnection();
@@ -93,7 +93,7 @@ public class ReplyDAO {
 				reply.setReplyer(rs.getString("replyer"));
 				reply.setRupdate(rs.getTimestamp("rupdate"));
 			}
-		} catch(Exception e) {
+		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
 			JDBCUtil.close(conn, pstmt, rs);
@@ -101,20 +101,22 @@ public class ReplyDAO {
 		return reply;
 	}
 	
-	// 댓글 수정하기
-	
+	//댓글 수정하기
 	public void updateReply(Reply reply) {
 		Timestamp now = new Timestamp(System.currentTimeMillis());
 		conn = JDBCUtil.getConnection();
-		String sql = "update t_reply set rcontent = ?, rupdate = ? where rno = ?";
+		String sql = "update t_reply set rcontent=?, rupdate=?"
+				+ "where rno = ?";
 		try {
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, reply.getRcontent());
 			pstmt.setTimestamp(2, now);
 			pstmt.setInt(3, reply.getRno());
-			pstmt.executeUpdate();
-		} catch(Exception e) {
+			pstmt.executeUpdate();  //수정 처리 완료
+		} catch (SQLException e) {
 			e.printStackTrace();
+		} finally {
+			JDBCUtil.close(conn, pstmt);
 		}
 	}
 }

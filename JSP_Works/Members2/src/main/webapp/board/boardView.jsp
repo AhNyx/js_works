@@ -74,29 +74,27 @@
 			</table>
 			<!-- 댓글 영역 -->
 			<h3><i class="fa-solid fa-pen-to-square"></i> 댓글</h3>
-
 			<c:forEach items="${replyList}" var="reply">
 			<div class="reply">
 				<!-- 댓글 내용 줄바꿈 -->
 				<p><c:out value="${fn:replace(reply.rcontent, LF, BR)}" 
 							escapeXml="false" />
-				<%-- <p>${reply.rcontent}</p> --%>
-				
-				<c:if test="${reply.rupdate != null}">
-				<p>작성자: ${reply.replyer} (수정일: ${reply.rupdate})
-				</c:if>
-				<c:if test="${reply.rupdate == null}">
-				<p>작성자: ${reply.replyer} (작성일: ${reply.rdate})			
-				</c:if>
-
+				<p>작성자: ${reply.replyer} 
+				  <c:choose>
+				  	<c:when test="${not empty reply.rupdate}">
+				  		(수정일: ${reply.rupdate})
+				  	</c:when>
+				    <c:otherwise>
+				    	(작성일: ${reply.rdate})
+				    </c:otherwise>
+				  </c:choose>
 				<c:if test="${reply.replyer == sessionId}">
 					<a href="/deleteReply.do?bnum=${board.bnum}&rno=${reply.rno}"
-					onclick="return confirm('정말로 삭제하시겠습니까?')">삭제</a> |
+					   onclick="return confirm('정말로 삭제하시겠습니까?')">삭제</a> |
 					<a href="/replyUpdateForm.do?bnum=${board.bnum}&rno=${reply.rno}">수정</a>
-				</p>
 				</c:if>
+				</p>
 			</div>
-			
 			</c:forEach>
 			<!-- 댓글 등록 -->
 			<c:if test="${not empty sessionId}">

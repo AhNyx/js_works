@@ -42,9 +42,11 @@ public class Member implements Serializable{
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
+
 	public Timestamp getJoinDate() {
 		return joinDate;
 	}
+
 	public void setJoinDate(Timestamp joinDate) {
 		this.joinDate = joinDate;
 	}

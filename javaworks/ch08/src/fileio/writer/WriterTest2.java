@@ -13,7 +13,6 @@ public class WriterTest2 {
 			fw.write("Good Luck\n");
 			fw.write("코로나 주의하세요\n");
 			fw.write("좋은 하루 되세요");
-			
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {
@@ -24,7 +23,6 @@ public class WriterTest2 {
 			}
 		}
 		System.out.println("수행 완료!");
-		
 	}
 
 }
