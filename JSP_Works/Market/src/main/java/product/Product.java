@@ -15,7 +15,7 @@ public class Product implements Serializable{
 	private Long unitsInStock;   //재고수
 	private String condition;    //신상품 or 중고품
 	private String productImage; //상품 이미지
-	private int quantity; // 장바구니에 담은 개수
+	private int quantity;        //장바구니에 담은 개수
 	
 	public String getProductId() {
 		return productId;
@@ -77,5 +77,4 @@ public class Product implements Serializable{
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
-	
 }

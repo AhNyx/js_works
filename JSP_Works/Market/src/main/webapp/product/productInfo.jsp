@@ -6,14 +6,12 @@
 <head>
 <meta charset="UTF-8">
 <title>상품 정보</title>
-<link rel="stylesheet" href="resources/css/bootstrap.css">
-<script src="resources/js/bootstrap.js"></script>
 <script type="text/javascript">
-	function addToCart(){
+	function addToCart(){		
 		if(confirm('상품을 장바구니에 추가하시겠습니까?')){
-			document.addForm.submit();
-		} else {
-			document.addForm.reset();
+			document.addForm.submit();  //폼을 전송
+		}else{
+			document.addForm.reset(); 
 		}
 	}
 </script>
@@ -39,8 +37,8 @@
 						<a href="#" onclick="addToCart()" class="btn btn-info">상품 주문</a>
 						<a href="/cart.do" class="btn btn-warning">장바구니</a>
 						<a href="/productList.do" 
-						   class="btn btn-secondary">&laquo; 상품 목록</a>
-				  	</form>
+					       class="btn btn-secondary">상품 목록 &raquo; </a>
+				   </form>
 				</p>
 			</div>
 		</div>
