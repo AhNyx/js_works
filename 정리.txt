@@ -1,0 +1,36 @@
+정리
+
+jsp는 서블릿
+
+라이프 사이클
+서블릿컨테이너
+(init
+service(dopost,doget)
+destroy)
+
+jsp
+1.스크립트 태그
+	1.지시어 Directive Element
+		1) page
+		2) include
+		3) taglib
+	2.스크립팅 원소 Scripting Element
+		선언 <%! ........ %> 클래스(멤버변수 , 메소드) 정의
+		스크립트릿 <% ........ %> main과 유사
+		표현식 <%= ........ %> sysout과 유사
+2.액션 태그
+3.el 태그
+
+서블릿의 9가지 내장객체
+page
+request
+response
+session
+aplication
+
+config
+out
+pageContext 
+Exception
+
+java lts
