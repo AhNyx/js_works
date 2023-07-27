@@ -34,3 +34,7 @@ pageContext
 Exception
 
 java lts
+
+
+추가로 공부하면 좋은것
+리액트, AWS, 리눅스
