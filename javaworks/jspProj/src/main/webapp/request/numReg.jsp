@@ -1,4 +1,3 @@
-<%@page import="java.util.ArrayList"%>
 <%@page import="java.util.Arrays"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -10,26 +9,31 @@
 </head>
 <body>
 <%
-	String[] noArr = request.getParameterValues("no");
+	String [] noArr = request.getParameterValues("no");
 
-	int result;	
-	int[] intArr;	
-	
-	int a = Integer.parseInt(noArr);
-	
-	for(int i = 0; i<a.length;i++){
-		if(a % 2 == 0)
-			intArr[i] = a;
+	int tot = 0;
+	for (String str : noArr) {
+		//System.out.println(str);
+		
+		try {
+			int i = Integer.parseInt(str);
+			
+			//짝수냐? 짝수 더하기가 안됍니다. 여기좀 풀어주세요
+			if(i % 2 == 0) {
+				tot += i;
+				//System.out.println("짝수만:"+i+","+tot);
+			}
+			
+		} catch (Exception e) {
+			
+			//System.out.println("에러 글자였다:"+str);
+		}
+		
 	}
-	for(int i : intArr){
-		result += i;
-	}
-	
-	
 %>
 <h1>numReg</h1>
-no : <%=request.getParameter("no") %><br/>
-noArr : <%=Arrays.toString(noArr) %>
-
+no:<%=request.getParameter("no") %><br/>
+noArr:<%=Arrays.toString(noArr) %><br/>
+tot:<%=tot %>
 </body>
 </html>
