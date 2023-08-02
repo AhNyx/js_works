@@ -35,6 +35,13 @@ Exception
 
 java lts
 
+include 페이지 내 페이지 삽입 attribute
+sendRedirect 페이지 이동 (url 변경)
+forward 페이지 이동 (url 변경 x)
+
+
+
 
 추가로 공부하면 좋은것
 리액트, AWS, 리눅스
+
